@@ -1,0 +1,77 @@
+###################### GENERAL ####################
+###################################################
+    
+spring:  
+  profiles:
+    active: dev          
+  aop:
+    proxy-target-class: false
+
+---
+###################################################
+#### PROFILE DEV ##################################
+spring:
+  profiles: dev
+  application:
+    name: msg_flow
+    
+  jpa:
+    properties:
+      hibernate:
+        #dialect: org.hibernate.dialect.MySQLDialect        
+        ##dialect: org.hibernate.dialect.MySQL5InnoDBDialect       
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        naming_strategy:  org.hibernate.cfg.DefaultNamingStrategy        
+        show_sql: true
+        format_sql: true          
+        packagesToScan: pe.jaav.sistemas    
+        id:
+          new_generator_mappings: false
+                
+    hibernate:
+      ddl-auto: none
+    
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+      
+server:
+  port: ${vcap.application.port:8082}      
+
+
+
+---
+###################################################
+#### PROFILE PROD ##################################
+spring:
+  profiles: prod
+  application:
+    name: msg_flow
+    
+  jpa:
+    properties:
+      hibernate:        
+        ##dialect: org.hibernate.dialect.MySQL5InnoDBDialect       
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        naming_strategy:  org.hibernate.cfg.DefaultNamingStrategy        
+        show_sql: false
+        format_sql: true          
+        packagesToScan: pe.jaav.sistemas    
+        id:
+          new_generator_mappings: false
+                
+    hibernate:
+      ddl-auto: none
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+      
+server:
+  port: ${vcap.application.port:${port}}      
