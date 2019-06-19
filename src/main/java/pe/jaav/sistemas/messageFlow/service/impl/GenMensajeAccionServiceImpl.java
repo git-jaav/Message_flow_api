@@ -182,7 +182,8 @@ public class GenMensajeAccionServiceImpl  implements GenMensajeAccionService {
 			filtro.setPassword(password);
 			HttpHeaders headers = new HttpHeaders();
 			headers.set("content-type", "application/json;charset=UTF-8");
-			HttpEntity<UserCredentials> requestAuth = new HttpEntity<UserCredentials>(filtro,headers);		
+			HttpEntity<UserCredentials> requestAuth = new HttpEntity<UserCredentials>(filtro,headers);
+			logger.info("AUTH: [USER]::"+username +":[PASS]:" + password);
 			ResponseEntity<SysUsuarioJson> resultAuth = restTemplate.postForEntity(uri, requestAuth, SysUsuarioJson.class);
 			Integer statusAuth = resultAuth.getStatusCodeValue();			
 			if(statusAuth == HttpStatus.ACCEPTED.value()
@@ -193,6 +194,7 @@ public class GenMensajeAccionServiceImpl  implements GenMensajeAccionService {
 			}			
 		}catch(Exception e) {
 			e.printStackTrace();
+			logger.error("autorizarUsuarioEnv",e);
 		}
 			
 		return ResultTx.error(objUsuario, "0");

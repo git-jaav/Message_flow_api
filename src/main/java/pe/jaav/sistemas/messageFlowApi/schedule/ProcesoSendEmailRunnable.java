@@ -90,6 +90,8 @@ public class ProcesoSendEmailRunnable extends GeneralRunnable{
 					//Actualizar controller Schedulle
 					getComponentController().setTokenSecurity(token);
 					getComponentController().setIdSecurity(idSecurity);
+				}else {
+					logger.warn("error en login");
 				}
 			}
 			
