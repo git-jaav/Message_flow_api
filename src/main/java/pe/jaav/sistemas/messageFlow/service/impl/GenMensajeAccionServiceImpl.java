@@ -183,7 +183,7 @@ public class GenMensajeAccionServiceImpl  implements GenMensajeAccionService {
 			HttpHeaders headers = new HttpHeaders();
 			headers.set("content-type", "application/json;charset=UTF-8");
 			HttpEntity<UserCredentials> requestAuth = new HttpEntity<UserCredentials>(filtro,headers);
-			logger.info("AUTH: [USER]::"+username +":[PASS]:" + password);
+			logger.info("AUTH: [USER]::"+username +":[PASS]:" + "****");
 			ResponseEntity<SysUsuarioJson> resultAuth = restTemplate.postForEntity(uri, requestAuth, SysUsuarioJson.class);
 			Integer statusAuth = resultAuth.getStatusCodeValue();			
 			if(statusAuth == HttpStatus.ACCEPTED.value()
