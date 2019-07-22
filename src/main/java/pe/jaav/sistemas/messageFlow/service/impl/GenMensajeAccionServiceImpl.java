@@ -205,7 +205,7 @@ public class GenMensajeAccionServiceImpl  implements GenMensajeAccionService {
 		boolean result = false;
 		try {
 			
-			String uri =uriBase + URI_AUTH_AUTORIZAR;
+			String uri =uriBase + URI_AUTH_BUSCAR_USUARIO_ID+id;
 			RestTemplate restTemplate = new RestTemplate();		
 			HttpHeaders headers = new HttpHeaders();
 			headers.set("content-type", "application/json;charset=UTF-8");

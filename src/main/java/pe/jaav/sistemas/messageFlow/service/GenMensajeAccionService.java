@@ -13,7 +13,7 @@ public interface GenMensajeAccionService {
 	public static final String URI_MSG_ACCION_LISTAR_PENDIENTES = "/mensajeaccion/listar/pendientes";
 	
 	public static final String URI_AUTH_AUTORIZAR= "/auth/autorizar";
-	public static final String URI_AUTH_BUSCAR_USUARIO_ID= "/usuario/auth//buscar/";
+	public static final String URI_AUTH_BUSCAR_USUARIO_ID= "/usuario/buscar/";
 	
 		
 	public List<GenMensajeAccionContextJson> listarPendientes( String uriBase,String token);	
