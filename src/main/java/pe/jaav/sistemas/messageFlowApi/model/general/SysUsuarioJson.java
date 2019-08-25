@@ -3,6 +3,8 @@ package pe.jaav.sistemas.messageFlowApi.model.general;
 
 import java.util.Date;
 
+import lombok.Getter;
+import lombok.Setter;
 import pe.jaav.sistemas.messageFlowApi.model.EntidadJson;
 
 
@@ -14,6 +16,8 @@ import pe.jaav.sistemas.messageFlowApi.model.EntidadJson;
 	}
 )
 @JsonViewCustom(JsonViewInterfaces.ViewGeneral.class)*/
+@Getter
+@Setter
 public  class SysUsuarioJson extends EntidadJson<SysUsuarioJson> {
 	
 	/**
@@ -42,7 +46,7 @@ public  class SysUsuarioJson extends EntidadJson<SysUsuarioJson> {
 	private String sexoPersona;
 	private Date fechaNacimientoPersona;
 	
-	
+	/*
 	public Integer getUsuaId() {
 		return usuaId;
 	}
@@ -146,6 +150,7 @@ public  class SysUsuarioJson extends EntidadJson<SysUsuarioJson> {
 	public void setFechaNacimientoPersona(Date fechaNacimientoPersona) {
 		this.fechaNacimientoPersona = fechaNacimientoPersona;
 	}
+	*/
 	
 	
 }

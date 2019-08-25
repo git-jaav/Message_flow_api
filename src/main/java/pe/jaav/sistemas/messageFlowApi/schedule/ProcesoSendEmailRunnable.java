@@ -36,14 +36,14 @@ public class ProcesoSendEmailRunnable extends GeneralRunnable{
 	}
 
 	/** Para test con un mensaje en particular
-	 * @param mensajeTest
+	 * @param timeMilliSecond
 	 */
 	public ProcesoSendEmailRunnable(long timeMilliSecond) {
 		super(timeMilliSecond);		
 	}
 
 	/** para determinar el DELAY en pruebas
-	 * @param timeMilliSecond
+	 * @param mensajeTest
 	 */
 	public ProcesoSendEmailRunnable(String mensajeTest) {
 		super(mensajeTest);		
@@ -137,9 +137,8 @@ public class ProcesoSendEmailRunnable extends GeneralRunnable{
 	
 	/**
 	 * Iniciar el envio de Correo Asyncrono
-	 * 
-	 * @param indicaTipo
-	 * @param mensajeBodyAux
+	 * *
+	 * @param contextMsg
 	 */
 	public void iniciarEnvioCorreo(GenMensajeAccionContextJson contextMsg) {
 		/** */

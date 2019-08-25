@@ -21,7 +21,9 @@
 		<java.version>1.8</java.version>
 		<dozer.version>5.5.1</dozer.version>		
 		<swagger.version>2.7.0</swagger.version>
-		<dozer.version>5.5.1</dozer.version>				
+		<dozer.version>5.5.1</dozer.version>
+		<rxjava.version>2.2.2</rxjava.version>
+		<retrofit.version>2.5.0</retrofit.version>
 		<!-- 
 		<skipTests>true</skipTests>	
 		 -->
@@ -58,7 +60,37 @@
 		    <artifactId>springfox-swagger2</artifactId>
 		    <version>${swagger.version}</version>
 		</dependency>
-        			
+
+		<!-- https://mvnrepository.com/artifact/io.reactivex.rxjava2/rxjava -->
+		<dependency>
+			<groupId>io.reactivex.rxjava2</groupId>
+			<artifactId>rxjava</artifactId>
+			<version>${rxjava.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit -->
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>retrofit</artifactId>
+			<version>${retrofit.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.squareup.retrofit2</groupId>
+			<artifactId>converter-gson</artifactId>
+			<version>${retrofit.version}</version>
+		</dependency>
+
+
 		<dependency>
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger-ui</artifactId>

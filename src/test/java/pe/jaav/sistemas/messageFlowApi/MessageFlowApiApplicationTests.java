@@ -21,7 +21,7 @@ public class MessageFlowApiApplicationTests {
 
 		//Assert.assertEquals();
 		//assertThat("6".equals(""+name.length());
-		Assert.assertTrue("SS" , "6".equals(""+name.length()) );
+		Assert.assertTrue("SS" , "4".equals(""+name.length()) );
 
 	}
 }
