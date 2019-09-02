@@ -41,7 +41,7 @@ public class SchedulingComponent {
 	@EventListener(ContextRefreshedEvent.class)
 	public void contextRefreshedEvent() {
 		if(UtilesRest.SI_db.equals(UtilesRest.getAppProperty("config.schedule.onstart.ejecutar"))){
-			ejecutarProcesos();	
+			//ejecutarProcesos();
 		}else{
 			System.out.println("Tareas scheduling inhabilitadas...");
 		}

@@ -1,13 +1,19 @@
 package pe.jaav.sistemas.messageFlowApi.model.general;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
+@Getter
+@Setter
 public class GenMensajeAccionContextJson {
 
 	private GenMensajeAccionJson objMensajeAccion;
 	private List<GenMensajeAccionDestinoJson> listMensajeAccionDestino;
 	
 	//
+	/*
 	public GenMensajeAccionJson getObjMensajeAccion() {
 		return objMensajeAccion;
 	}
@@ -20,5 +26,5 @@ public class GenMensajeAccionContextJson {
 	public void setListMensajeAccionDestino(List<GenMensajeAccionDestinoJson> listMensajeAccionDestino) {
 		this.listMensajeAccionDestino = listMensajeAccionDestino;
 	}
-		
+	*/
 }

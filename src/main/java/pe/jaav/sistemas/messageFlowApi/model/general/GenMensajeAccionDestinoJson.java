@@ -1,7 +1,11 @@
 package pe.jaav.sistemas.messageFlowApi.model.general;
 
+import lombok.Getter;
+import lombok.Setter;
 import pe.jaav.sistemas.messageFlowApi.model.EntidadJson;
 
+@Getter
+@Setter
 public class GenMensajeAccionDestinoJson extends EntidadJson<GenMensajeAccionJson> {
 
 	/**
@@ -15,7 +19,8 @@ public class GenMensajeAccionDestinoJson extends EntidadJson<GenMensajeAccionJso
 	private String msgadFlagCc;
 	private String msgadFlagCco;
 	private String msgadFlagTo;
-	
+
+	/*
 	public Integer getMsgaMensajeAccionId() {
 		return msgaMensajeAccionId;
 	}
@@ -63,6 +68,6 @@ public class GenMensajeAccionDestinoJson extends EntidadJson<GenMensajeAccionJso
 	public void setMsgadFlagTo(String msgadFlagTo) {
 		this.msgadFlagTo = msgadFlagTo;
 	}	
-	
+	*/
 	
 }

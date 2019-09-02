@@ -11,7 +11,8 @@ public interface GenMensajeAccionService {
 
 	public static final String URI_MSG_ACCION_REGISTRO_ACTUALIZAR = "/mensajeaccion/registro/actualizar";
 	public static final String URI_MSG_ACCION_LISTAR_PENDIENTES = "/mensajeaccion/listar/pendientes";
-	
+	public static final String URI_MSG_ACCION_LISTAR = "/mensajeaccion/listar";
+
 	public static final String URI_AUTH_AUTORIZAR= "/auth/autorizar";
 	public static final String URI_AUTH_BUSCAR_USUARIO_ID= "/usuario/buscar/";
 	

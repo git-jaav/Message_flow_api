@@ -2,9 +2,12 @@ package pe.jaav.sistemas.messageFlowApi.model.general;
 
 import java.util.Date;
 
+import lombok.Getter;
+import lombok.Setter;
 import pe.jaav.sistemas.messageFlowApi.model.EntidadJson;
 
-
+@Getter
+@Setter
 public class GenMensajeAccionJson  extends EntidadJson<GenMensajeAccionJson> {
 
 	/**
@@ -23,7 +26,7 @@ public class GenMensajeAccionJson  extends EntidadJson<GenMensajeAccionJson> {
 	private String msgTopicoCode;
 	private String msgUsuariomodif;
 	
-	
+/*
 	public Integer getMsgaMensajeAccionId() {
 		return msgaMensajeAccionId;
 	}
@@ -91,7 +94,6 @@ public class GenMensajeAccionJson  extends EntidadJson<GenMensajeAccionJson> {
 	public void setMsgCuerpomensajeText(String msgCuerpomensajeText) {
 		this.msgCuerpomensajeText = msgCuerpomensajeText;
 	}
-	
-	
+*/
 	
 }
