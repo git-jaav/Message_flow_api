@@ -37,7 +37,12 @@ spring:
       enabled: true
     restart:
       enabled: true
-      
+  boot:
+    admin:
+      username: admin
+      password: 1234
+      url: http://localhost:9999
+
 server:
   port: ${vcap.application.port:8082}      
 
@@ -50,7 +55,7 @@ spring:
   profiles: prod
   application:
     name: msg_flow
-    
+
   jpa:
     properties:
       hibernate:        
@@ -72,6 +77,56 @@ spring:
       enabled: true
     restart:
       enabled: true
-      
+
 server:
-  port: ${vcap.application.port:${port}}      
+  port: ${vcap.application.port:${port}}
+
+---
+###################################################
+#### PROFILE PROD - ADMIN BOOT ##################################
+
+spring:
+  profiles: prod_ab
+  application:
+    name: msg_flow_ab
+
+  boot:
+    admin:
+      client:
+        url: ${ADMINBOOT_CLIENT_URL}
+        username: ${ADMINBOOT_CLIENT_USER}
+        password: ${ADMINBOOT_CLIENT_PASSWORD}
+
+  jpa:
+    properties:
+      hibernate:
+        ##dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+        naming_strategy:  org.hibernate.cfg.DefaultNamingStrategy
+        show_sql: false
+        format_sql: true
+        packagesToScan: pe.jaav.sistemas
+        id:
+          new_generator_mappings: false
+
+    hibernate:
+      ddl-auto: none
+
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+server:
+  port: ${vcap.application.port:${port}}

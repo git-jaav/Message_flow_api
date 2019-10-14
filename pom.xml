@@ -21,7 +21,9 @@
 		<java.version>1.8</java.version>
 		<dozer.version>5.5.1</dozer.version>		
 		<swagger.version>2.7.0</swagger.version>
-		<dozer.version>5.5.1</dozer.version>				
+		<dozer.version>5.5.1</dozer.version>
+		<spring-boot-admin.version>2.1.6</spring-boot-admin.version>
+
 		<!-- 
 		<skipTests>true</skipTests>	
 		 -->
@@ -78,7 +80,20 @@
 			<artifactId>JACommon-UtilesJMail</artifactId>
 			<version>1.0</version>
 			<type>jar</type>
-		</dependency>					
+		</dependency>
+
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>${spring-boot-admin.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
