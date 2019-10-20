@@ -54,7 +54,7 @@ server:
 spring:
   profiles: prod
   application:
-    name: msg_flow
+    name: ${APP_NAME}
 
   jpa:
     properties:
@@ -88,7 +88,7 @@ server:
 spring:
   profiles: prod_ab
   application:
-    name: msg_flow_ab
+    name: ${APP_NAME}
 
   boot:
     admin:
@@ -96,6 +96,11 @@ spring:
         url: ${ADMINBOOT_CLIENT_URL}
         username: ${ADMINBOOT_CLIENT_USER}
         password: ${ADMINBOOT_CLIENT_PASSWORD}
+
+        instance:
+          management-url: ${ADMINBOOT_CLIENT_INSTANCE_HOST}/actuator
+          health-url: ${ADMINBOOT_CLIENT_INSTANCE_HOST}/actuator/health
+          service-url: ${ADMINBOOT_CLIENT_INSTANCE_HOST}/
 
   jpa:
     properties:
