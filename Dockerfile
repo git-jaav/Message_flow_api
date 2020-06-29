@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 LABEL maintainer="araucovillar@gmail.com"
+ARG BUILD_PROFILE
 VOLUME /tmp
 WORKDIR /workspace
 ADD target/*.jar app.jar
