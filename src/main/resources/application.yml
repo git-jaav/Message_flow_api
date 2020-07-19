@@ -124,6 +124,9 @@ spring:
     restart:
       enabled: true
 
+logging:
+  file: logs-api/api-msg-flow
+
 management:
   endpoints:
     web:
@@ -132,6 +135,8 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+    logfile:
+      external-file: logs-api/api-msg-flow.log
 
 server:
   port: ${vcap.application.port:${port}}
